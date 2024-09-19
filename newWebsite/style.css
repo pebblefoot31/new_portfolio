@@ -1,0 +1,111 @@
+/*GENERAL*/
+@import url("https://fonts.googleapis.com/css2?family=Tenor+Sans&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Tenor Sans", sans-serif;
+  /*background-color: rgb(69, 140, 69);*/
+  background: linear-gradient(to bottom, rgb(42, 128, 42), rgb(139, 233, 139));
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  /*font-family: "Times New Roman"*/
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+p {
+  color: rgb(255, 255, 255);
+}
+
+/*Transition*/
+
+a,
+.btn {
+  transition: all 300ms ease;
+}
+
+/*DESKTOP NAV*/
+
+nav,
+.nav-links {
+  display: flex;
+}
+
+nav {
+  justify-content: space-around;
+  align-items: center;
+  height: 15vh; /*the percent of the page that nav will take up*/
+}
+
+.nav-links {
+  gap: 2rem; /*rem is unit of measurement in frontend (pixels)*/
+  list-style: none;
+  font-size: 2rem;
+}
+
+a {
+  color: lightgreen;
+  text-decoration: none;
+  text-decoration-color: white;
+}
+
+a:hover {
+  color: whitesmoke;
+  text-decoration: underline;
+  /*text-decoration-line: wavy;*/
+  text-underline-offset: 1rem;
+  text-decoration-color: whitesmoke;
+}
+
+.logo {
+  color: whitesmoke;
+  font-size: 2rem;
+  font-weight: lighter;
+}
+
+.logo:hover {
+  cursor: default; /*the cursor won't change!*/
+}
+
+/*HAMBURGER MENU*/
+#hamburger-nav {
+  display: none;
+}
+
+.hamburger-menu {
+  position: relative;
+  display: inline-block;
+}
+
+.hamburger-icon {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 24px;
+  width: 30px;
+  cursor: pointer;
+}
+
+.hamburger-icon span {
+  width: 100%;
+  height: 2px;
+  background-color: lightgreen;
+  transition: all 0.3 ease-in-out; /*this is what will make the hamburger menu an 'X' after we click it*/
+}
+
+.menu-links {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  background-color: white;
+  width: fit-content;
+  max-height: 0;
+  overflow: hidden;
+  transition: all 0.3 ease-in-out;
+}
